@@ -4,10 +4,14 @@
   </h1>
 </header>
 <main class="container">
+  <div class="row col-md-12 mb-4">
+    <a routerLink="/cadastro" class="btn btn-primary">Nova Foto</a>
+  </div>
   <div class="row">
-    <card *ngFor="let foto of listaFotos" [foto]="foto" class="col-2">
-      <!--*ngFor é um  loop, é uma diretiva do angular-->
+    <!--*ngFor é um  loop, é uma diretiva do angular-->
+    <card *ngFor="let foto of listaFotos" [foto]="foto" class=" col-sm-4 col-lg-2 mb-4">
       <foto [url]="foto.url" [titulo]="foto.titulo"></foto>
+      <button (click)="deletar(foto)" class="btn btn-danger">Apagar</button>
     </card>
   </div>
 </main>

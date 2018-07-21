@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { Foto } from "./foto";
 
 //criando a anotação de component
 @Component({
@@ -12,7 +13,7 @@ import { Component, Input } from "@angular/core";
 })
 //classe do component
 //'export' deixa a classe como publico
-export class FotoComponent {
+export class FotoComponent extends Foto{
     //'@Input' permite entrada de valor
     @Input() url = '';
     @Input() titulo = '';

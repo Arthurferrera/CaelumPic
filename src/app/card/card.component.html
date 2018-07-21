@@ -1,9 +1,9 @@
 <article class="card">
     <!--ng-content mostra tudo que esta dentro da tag do component em app.component.html-->
-    <ng-content></ng-content>
+    <ng-content select="foto"></ng-content>
     <div class="card-body">
         <h5 class="card-title">{{foto.titulo}}</h5>
         <p class="card-text">{{foto.descricao}}</p>
-        <a href="#" class="btn btn-primary">Remover</a>
+        <ng-content select=".btn-danger"></ng-content>
     </div>
 </article>

@@ -8,6 +8,7 @@ import { CardModule } from './card/card.module';
 import { ListagemComponent } from './listagem/listagem.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ModuloRoteamento } from './app.routes';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModuloRoteamento } from './app.routes';
     CardModule,
     ModuloRoteamento,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   //component que da boot na aplicação
