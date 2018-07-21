@@ -1,0 +1,13 @@
+<header class="jumbotron">
+  <h1  class="text-center">
+    CaelumPic
+  </h1>
+</header>
+<main class="container">
+  <div class="row">
+    <card *ngFor="let foto of listaFotos" [foto]="foto" class="col-2">
+      <!--*ngFor é um  loop, é uma diretiva do angular-->
+      <foto [url]="foto.url" [titulo]="foto.titulo"></foto>
+    </card>
+  </div>
+</main>
