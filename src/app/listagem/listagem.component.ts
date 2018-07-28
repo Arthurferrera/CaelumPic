@@ -9,7 +9,7 @@ import { Foto } from '../foto/foto';
 })
 export class ListagemComponent implements OnInit {
 
-  listaFotos: Foto[];
+  listaFotos: Foto[] = [];
 
   constructor(private servico:FotoService){
 

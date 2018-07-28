@@ -5,11 +5,17 @@
 </header>
 <main class="container">
   <div class="row col-md-12 mb-4">
-    <a routerLink="/cadastro" class="btn btn-primary">Nova Foto</a>
+    <form class="input-group">
+        <span class="input-group-prepend col-12">
+            <a routerLink="/cadastro" class="btn btn-primary">Nova Foto</a>
+          <input (input)="true" #inputBusca type="search" class="form-control">
+        </span>
+    </form>
+    
   </div>
   <div class="row">
     <!--*ngFor é um  loop, é uma diretiva do angular-->
-    <card *ngFor="let foto of listaFotos" [foto]="foto" class=" col-sm-4 col-lg-2 mb-4">
+    <card *ngFor="let foto of listaFotos | filtroPorTitulo:inputBusca.value" [foto]="foto" class=" col-sm-4 col-lg-2 mb-4">
       <a [routerLink]="['/cadastro', foto._id]" class="foto">
         <foto [url]="foto.url" [titulo]="foto.titulo"></foto>
       </a>
