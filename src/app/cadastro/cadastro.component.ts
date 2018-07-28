@@ -1,28 +1,61 @@
 import { Component, OnInit } from '@angular/core';
 import { Foto } from '../foto/foto';
-import { HttpClient } from '@angular/common/http';
+import { FotoService } from '../services/foto.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'caelumpic-cadastro',
   templateUrl: './cadastro.component.html',
   styleUrls: ['./cadastro.component.css']
 })
+
 export class CadastroComponent implements OnInit {
 
   foto = new Foto();
+  constructor(private servico: FotoService, 
+    private rotaAtivada: ActivatedRoute,
+    private roteador: Router){}
 
-  constructor(private conexaoApi: HttpClient){}
+  ngOnInit() {
+    //console.log(this.rotaAtivada);
+    
+    //mesma coisa com sanpshot
+    const fotoId = this.rotaAtivada.snapshot.params.fotoId;
 
-  ngOnInit() {}
+    if(fotoId){
+      this.servico.buscar(fotoId)
+      .subscribe(
+        fotoApi => {
+          this.foto = fotoApi;
+        }
+      )
+    }
+
+    //usando subscribe
+    /*this.rotaAtivada.params.subscribe(
+      parametros => {
+        console.log(parametros.fotoId);
+        
+      }
+    )*/
+    
+  }
   
   salvar(){
-    this.conexaoApi.post(
-      'http://localhost:3000/v1/fotos/',
-      this.foto
-    ).subscribe(
-      (respostaApi) => console.log(respostaApi)
-      ,
-      (erro) => console.log(erro)
-    );
+
+    if(this.foto._id){
+      this.servico.atualizar(this.foto).subscribe(
+        () => this.roteador.navigate([''])
+      );
+    } else {
+      this.servico.cadastrar(this.foto).subscribe(
+        () => {
+          
+        }
+        ,
+        (erro) => console.log(erro)
+      );
+    }
+
   }
 }
