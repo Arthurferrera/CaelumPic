@@ -1,27 +1,59 @@
-# Caelumpic
+<p align="center">
+  <a href="https://caelum.com.br">
+    <img alt="Made by Caelum" src="https://img.shields.io/badge/made%20by-Caelum-%237519C1">
+  </a>
+  <a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+# Índice
 
-## Development server
+- [Sobre](#sobre)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Como Usar](#como-usar)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<a id="sobre"></a>
 
-## Code scaffolding
+## :bookmark: Sobre
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+O <strong>CaelumPic</strong> é uma aplicação Web que possiblita cadastrar imagens inserindo links de onde as imagens foram encontradas e também ter a listagem de todas a imagens cadastradas. No desenvolvimento desse projeto foi possível entender toda a base do Angular e usar as principais funções dele. 
+<br />
 
-## Build
+Essa aplicação foi desenvolvida durante um curso feito em 2018 na <strong>Caelum</strong> e as aulas foram ministradas pela professora [Vanessa](https://github.com/vanessametonini).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<a id="tecnologias-utilizadas"></a>
 
-## Running unit tests
+## :rocket: Tecnologias Utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Durante o desenvolvimento desse projeto utilizamos as seguintes tecnologias.
 
-## Running end-to-end tests
+- Angular 6
+- Typescript
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+<a id="como-usar"></a>
 
-## Further help
+## :question: Como usar
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- #### Para conseguir rodar a aplicação é necessário alguns **pré-requisitos:**
+
+  - É **necessário** possuir o **Angular CLI** instalado na máquina
+  - Também, é **preciso** ter um gerenciador de pacotes seja o **NPM** (Caso tenha o node instalado já vai ter o npm)
+
+1. Faça um clone :
+
+```sh
+  $ git clone https://github.com/Arthurferrera/CaelumPic
+```
+
+2. Para executar a Aplicação execute os seguintes comandos:
+
+```sh
+  # Primeiro instale as dependências
+  $ npm install
+
+  # Inicie a aplicação web
+  $ ng serve
+```
+
+<h5 align="center">
+    Developed by <a href="https://www.linkedin.com/in/arthurferreira99/" target="_blank">Arthur Ferreira</a>
+</h5>
