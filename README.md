@@ -41,7 +41,7 @@ Durante o desenvolvimento desse projeto utilizamos as seguintes tecnologias.
 1. Faça um clone :
 
 ```sh
-  $ git clone https://github.com/Arthurferrera/CaelumPic
+  $ git clone https://github.com/Arthurferrera/CaelumPic.git
 ```
 
 2. Para executar a Aplicação execute os seguintes comandos:
